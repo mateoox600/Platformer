@@ -19,7 +19,7 @@ func _physics_process(delta):
 	vel = move_and_slide(vel, move_value[6].value)
 	if position.y < -2140:
 		print("You Win !")
-		$Sprite2.visible = true
+		$Sprite2.visible = false
 	
 
 func movement_loop():
@@ -38,6 +38,11 @@ func movement_loop():
 	var left = Input.is_action_pressed("left")
 	var jump = Input.is_action_just_pressed("jump")
 	var fire = Input.is_action_just_pressed("fire")
+	var reset = Input.is_action_just_pressed("reset")
+	
+	if reset == true:
+		get_tree().reload_current_scene()
+	
 	var dirx = int(right) - int(left)
 	
 	if dirx == -1 :
