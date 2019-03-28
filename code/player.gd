@@ -19,6 +19,7 @@ func _physics_process(delta):
 	vel = move_and_slide(vel, move_value[6].value)
 	if position.y < -2140:
 		print("You Win !")
+		$Sprite2.visible = true
 	
 
 func movement_loop():
