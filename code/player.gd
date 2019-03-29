@@ -40,7 +40,7 @@ func movement_loop():
 	var reset = Input.is_action_just_pressed("reset")
 	
 	if reset == true:
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://scene/Main Menu/mainMenu.tscn")
 	
 	var dirx = int(right) - int(left)
 	
