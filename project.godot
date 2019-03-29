@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformeur"
-run/main_scene="res://scene/Scene01.tscn"
+run/main_scene="res://scene/Main Menu/mainMenu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 

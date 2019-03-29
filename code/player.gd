@@ -17,8 +17,7 @@ func _physics_process(delta):
 	movement_loop()
 	vel.y += move_value[5].value * delta
 	vel = move_and_slide(vel, move_value[6].value)
-	if position.y < -2140:
-		print("You Win !")
+	if position.y < -3035:
 		$Sprite2.visible = false
 	
 
@@ -55,14 +54,14 @@ func movement_loop():
 		vel.x = lerp(vel.x, 0, 0.10)
 	
 	if jump == true and jump_count < move_value[1].value:
-		vel.y = -800
+		vel.y = -700
 		jump_count += 1
 		if jump_count == 2:
 			move_value[2].value -= 1
 			if move_value[2].value == 0:
 				move_value[1].value = 1
 	elif jump == true and wjump_count < move_value[3].value and is_on_wall():
-		vel.y = -200
+		vel.y = -400
 		wjump_count += 1
 		if wjump_count == 5:
 			move_value[4].value -= 1
